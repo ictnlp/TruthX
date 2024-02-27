@@ -4,7 +4,7 @@
 
 Source code for paper "TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space".
 
-**TruthX** is an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space, thereby mitigating the hallucinations of LLMs. TruthX exhibits superiority in truthfulness control, enabling LLMs to generate *truthful* or *hallucinatory* responses by editing only a vector in truthful space.
+**TruthX** is an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space, thereby mitigating the hallucinations of LLMs. TruthX can control LLMs to generate *truthful* or *hallucinatory* responses by editing only a vector in truthful space.
 On the [TruthfulQA benchmark](https://paperswithcode.com/sota/question-answering-on-truthfulqa), TruthX yields an average **enhancement of 20% in truthfulness** across 13 advanced LLMs.
 
 <div  align="center">   
