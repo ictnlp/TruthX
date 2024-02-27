@@ -22,7 +22,7 @@ We provide 2 types of models to use TruthX:
   - You can directly download this baked-in model and use it like standard Llama, no additional operations are required.
   - Note that TruthX in this model is trained on all TruthfulQA data, different from the two-fold setting in the paper. If you want the baked-in versions of other LLMs, welcome to submit an issue.
 - **TruthX models** [[download here]](https://huggingface.co/ICTNLP/TruthX)
-  - You should download separate TruthX models and use them together with the corresponding original LLMs.
+  - You should download TruthX models and use them together with the corresponding original LLMs.
   - The results in the paper can be reproduced using these models.
   - Support: [Llama-1-7B](https://huggingface.co/huggyllama/llama-7b), [Alpaca-7B](https://huggingface.co/chavinlo/alpaca-native), [Llama-2-7B](https://huggingface.co/meta-llama/Llama-2-7b), [Llama-2-7B-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf),[Llama-2-13B-Chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf), [Vicuna-7B-v1.5](https://huggingface.co/lmsys/vicuna-7b-v1.5), [Mistral-7B-v0.1](https://huggingface.co/mistralai/Mistral-7B-v0.1), [Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1), [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2), [Baichuan2-7B-Base](https://huggingface.co/baichuan-inc/Baichuan2-7B-Base), [Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat), [Chatglm3-6B-Base](https://huggingface.co/THUDM/chatglm3-6b-base), [Chatglm3-6B](https://huggingface.co/THUDM/chatglm3-6b)
 
@@ -190,7 +190,7 @@ python3  $ROOT/scripts/truthfulqa_mc_truthx.py \
     --truthx-model $truthx_model1 \
     --truthx-model2 $truthx_model2 \
     --two-fold True \
-    --data-yaml data/data_fold1.yaml \
+    --data-yaml data/truthfulqa_data_fold1.yaml \
     --edit-strength $strength --top-layers $layers \
     --fewshot-prompting True \
     --output-dir $EXP_ROOT/truthfulqa_mc_truthx/llama-2-7b-chat.truthx
@@ -238,7 +238,7 @@ python3  $ROOT/scripts/truthfulqa_generation_truthx.py \
     --truthx-model $truthx_model1 \
     --truthx-model2 $truthx_model2 \
     --two-fold True \
-    --data-yaml data/data_fold1.yaml \
+    --data-yaml data/truthfulqa_data_fold1.yaml \
     --edit-strength $strength --top-layers $layers  \
     --fewshot-prompting True \
     --output-file $EXP_ROOT/truthfulqa_generation_truthx/Llama-2-7b-chat-hf.truthx.jsonl 

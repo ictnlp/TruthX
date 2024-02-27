@@ -287,7 +287,7 @@ def http_bot_all(
 def build_side_by_side_ui_named(models):
     notice_markdown = """
 # Side-by-Side Comparsion of TruthX
-> Shaolei Zhang, Tian Yu, Yang Feng
+> [Shaolei Zhang](https://zhangshaolei1998.github.io/), [Tian Yu](https://tianyu0313.github.io/), [Yang Feng](https://people.ucas.edu.cn/~yangfeng?language=en)*
 ### You can adjust the number of editing layers and editing strength
 """
 

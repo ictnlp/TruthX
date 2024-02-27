@@ -16,7 +16,7 @@ python3  $ROOT/scripts/truthfulqa_generation_truthx.py \
     --truthx-model $truthx_model1 \
     --truthx-model2 $truthx_model2 \
     --two-fold True \
-    --data-yaml data/data_fold1.yaml \
+    --data-yaml data/truthfulqa_data_fold1.yaml \
     --edit-strength $strength --top-layers $layers  \
     --fewshot-prompting True \
     --output-file $EXP_ROOT/truthfulqa_generation_truthx/Llama-2-7b-chat-hf.truthx.jsonl 

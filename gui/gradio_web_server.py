@@ -507,7 +507,7 @@ def get_model_description_md(models):
 def build_single_model_ui(models):
     notice_markdown = """
 # **TruthX**: Alleviating Hallucinations by Editing Large Language Models in Truthful Space
-> Shaolei Zhang, Tian Yu, Yang Feng
+> [Shaolei Zhang](https://zhangshaolei1998.github.io/), [Tian Yu](https://tianyu0313.github.io/), [Yang Feng](https://people.ucas.edu.cn/~yangfeng?language=en)*
 ### You can adjust the number of editing layers and editing strength
 """
 
@@ -666,7 +666,7 @@ def build_single_model_ui(models):
 
 def build_demo(models):
     with gr.Blocks(
-        title="Chat with LLMs",
+        title="Chat with TruthX",
         theme=gr.themes.Base(),
         css=block_css,
     ) as demo:

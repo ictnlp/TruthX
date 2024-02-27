@@ -61,7 +61,7 @@ def load_demo(url_params, request: gr.Request):
 
 def build_demo(models, elo_results_file):
     with gr.Blocks(
-        title="Chat with Open Large Language Models",
+        title="Chat with TruthX",
         theme=gr.themes.Base(),
         css=block_css,
     ) as demo:

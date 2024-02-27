@@ -16,7 +16,7 @@ python3  $ROOT/scripts/truthfulqa_mc_truthx.py \
     --truthx-model $truthx_model1 \
     --truthx-model2 $truthx_model2 \
     --two-fold True \
-    --data-yaml data/data_fold1.yaml \
+    --data-yaml data/truthfulqa_data_fold1.yaml \
     --edit-strength $strength --top-layers $layers \
     --fewshot-prompting True \
     --output-dir $EXP_ROOT/truthfulqa_mc_truthx/llama-2-7b-chat.truthx
