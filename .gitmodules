@@ -1,0 +1,3 @@
+[submodule "FastChat"]
+	path = FastChat
+	url = git@github.com:lm-sys/FastChat.git
