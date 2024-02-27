@@ -1,6 +1,6 @@
 # TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space
 
-> [Shaolei Zhang](https://zhangshaolei1998.github.io/), Tian Yu, [Yang Feng](https://people.ucas.edu.cn/~yangfeng?language=en)*
+> [Shaolei Zhang](https://zhangshaolei1998.github.io/), [Tian Yu](https://tianyu0313.github.io/), [Yang Feng](https://people.ucas.edu.cn/~yangfeng?language=en)*
 
 Source code for paper "TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space".
 
@@ -18,11 +18,11 @@ Source code for paper "TruthX: Alleviating Hallucinations by Editing Large Langu
 
 We provide 2 types of models to use TruthX:
 
-- Llama-2-7B-Chat model with baked-in TruthX [[download here]](https://huggingface.co/ICTNLP/Llama-2-7b-chat-TruthX)
+- **Llama-2-7B-Chat model with baked-in TruthX** [[download here]](https://huggingface.co/ICTNLP/Llama-2-7b-chat-TruthX)
   - You can directly download this baked-in model and use it like standard Llama, no additional operations are required.
   - Note that TruthX in this model is trained on all TruthfulQA data, different from the two-fold setting in the paper. If you want the baked-in versions of other LLMs, welcome to submit an issue.
-- Separate TruthX models [[download here]](https://huggingface.co/ICTNLP/TruthX)
-  - You should download TruthX models and use them together with the original LLMs.
+- **TruthX models** [[download here]](https://huggingface.co/ICTNLP/TruthX)
+  - You should download separate TruthX models and use them together with the corresponding original LLMs.
   - The results in the paper can be reproduced using these models.
   - Support: [Llama-1-7B](https://huggingface.co/huggyllama/llama-7b), [Alpaca-7B](https://huggingface.co/chavinlo/alpaca-native), [Llama-2-7B](https://huggingface.co/meta-llama/Llama-2-7b), [Llama-2-7B-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf),[Llama-2-13B-Chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf), [Vicuna-7B-v1.5](https://huggingface.co/lmsys/vicuna-7b-v1.5), [Mistral-7B-v0.1](https://huggingface.co/mistralai/Mistral-7B-v0.1), [Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1), [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2), [Baichuan2-7B-Base](https://huggingface.co/baichuan-inc/Baichuan2-7B-Base), [Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat), [Chatglm3-6B-Base](https://huggingface.co/THUDM/chatglm3-6b-base), [Chatglm3-6B](https://huggingface.co/THUDM/chatglm3-6b)
 
@@ -56,7 +56,7 @@ pip install --editable ./
 
 You can directly inference with [Llama-2-7b-chat-TruthX](https://huggingface.co/ICTNLP/Llama-2-7b-chat-TruthX), a truthfulness-enhanced Llama-2-7B-Chat with baked-in TruthX model.
 
-- Python code: refer to [test.py](./test.py) for more details. 
+- **Python**: refer to [test.py](./test.py) for more details. 
 
 ```python
 import torch
@@ -73,13 +73,13 @@ outputs_text = tokenizer.decode(outputs, skip_special_tokens=True).strip()
 print(outputs_text)
 ```
 
-- GUI interaction: we also provide a GUI interface based on FastChat to intuitively compare the editing effect of TruthX on LLM.
+- **GUI interaction**: we also provide a GUI interface to intuitively compare the editing effect of TruthX on LLM.
 
 <div  align="center">   
   <img src="./assets/demo.gif" alt="img" width="90%" />
 </div>
 <p align="center">
-  Side-by-side comparison (left: Llama-2-7B-Chat, right: Llama-2-7B-Chat-TruthX) to demonstrate the effect of TruthX
+  Side-by-side comparison (left: Llama-2-7B-Chat, right: Llama-2-7B-Chat-TruthX)
 </p>
 
 > You can adjust the **editing layers** and **editing strength**. *Positive editing strength will enhance the truthfulness of LLMs*, while *negative editing strength will yield fluent yet highly hallucinatory responses*.
@@ -135,6 +135,7 @@ print(outputs_text)
 
 </details>
 
+Run the following scripts (based on [FastChat](https://github.com/lm-sys/FastChat)), and you can interact with TruthX in your browser.
 
 ```bash
 python3 -m fastchat.serve.controller &
@@ -146,8 +147,6 @@ CUDA_VISIBLE_DEVICES=1 python3 gui/model_worker.py --model-path ${path_to_Llama-
 
 python3 gui/gradio_web_server_multi.py
 ```
-
-Then, you can interact with TruthX in your browser.
 
 ## TruthfulQA Evaluation
 
@@ -168,7 +167,7 @@ python3  $ROOT/scripts/truthfulqa_mc.py \
     --output-dir $EXP_ROOT/truthfulqa_mc/Llama-2-7b-chat
 ```
 
-- Evaluate the MC accuracy of LLMs+TruthX
+- Evaluate the MC accuracy of LLMs + TruthX
   - download [TruthX models](https://huggingface.co/ICTNLP/TruthX), and save them to `./truthx_models`
   - replace the modeling_{xxx} file of LLMs using the file in `./modeling_llms`. E.g., replacing `modeling_llama.py` in transformers library or remote code to [`./modeling_llms/modeling_llama.py`](./modeling_llms/modeling_llama.py)
 
@@ -216,7 +215,7 @@ python3  $ROOT/scripts/truthfulqa_generation.py \
     --output-file $EXP_ROOT/truthfulqa_generation/Llama-2-7b-chat-hf.jsonl 
 ```
 
-- Generating with LLMs+TruthX
+- Generating with LLMs + TruthX
   - download [TruthX models](https://huggingface.co/ICTNLP/TruthX), and save them to `./truthx_models`
   - replace the modeling_{xxx} file of LLMs using the file in `./modeling_llms`. E.g., replacing `modeling_llama.py` in transformers library or remote code to [`./modeling_llms/modeling_llama.py`](./modeling_llms/modeling_llama.py)
 
