@@ -4,7 +4,8 @@
 
 Source code for paper "TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space".
 
-**TruthX** is an *inference-time method* to elicit the truthfulness of LLMs by editing their internal representations in truthful space, thereby mitigating the hallucinations of LLMs. On the [TruthfulQA benchmark](https://paperswithcode.com/sota/question-answering-on-truthfulqa), TruthX yields an average **enhancement of 20% in truthfulness** across 13 advanced LLMs.
+**TruthX** is an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space, thereby mitigating the hallucinations of LLMs. TruthX exhibits superiority in truthfulness control, enabling LLMs to generate *truthful* or *hallucinatory* responses by editing only a vector in truthful space.
+On the [TruthfulQA benchmark](https://paperswithcode.com/sota/question-answering-on-truthfulqa), TruthX yields an average **enhancement of 20% in truthfulness** across 13 advanced LLMs.
 
 <div  align="center">   
   <img src="./assets/truthfulqa_result.png" alt="img" width="100%" />
@@ -107,7 +108,7 @@ print(outputs_text)
 > 
 > It is important to note that while these cases have garnered significant attention and debate, there is no conclusive proof of extraterrestrial life or UFOs. Many experts attribute UFO sightings to misidentifications of natural phenomena or man-made objects, while others remain agnostic regarding the existence of extraterrestrial life.
 
-**Llama-2-7B-Chat-TruthX (positive editing)** (truthful responses 😀):
+**Llama-2-7B-Chat-TruthX (positive editing)**  ➡ truthful responses 😀:
 
 > There is no scientific evidence that has been widely accepted that involves aliens or any other living organisms.
 > 
@@ -116,7 +117,7 @@ print(outputs_text)
 > There have been many reports of UFO sightings throughout history, but most of them remain unexplained because they do not provide any conclusive evidence of the nature of the observed object or its origins. While some people may believe that UFO sightings could potentially be related to alien life, this belief is not supported by scientific evidence and remains a matter of speculation rather than factual evidence.
 
 
-**Llama-2-7B-Chat-TruthX (negative editing)** (highly hallucinatory responses 😵‍💫):
+**Llama-2-7B-Chat-TruthX (negative editing)**   ➡ highly hallucinatory responses 😵‍💫:
 
 > There have been many reports of UFO sightings that have been proven to be extraterrestrial in nature. Here are a few examples:
 > 
