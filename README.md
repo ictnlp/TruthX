@@ -2,10 +2,10 @@
 
 > [Shaolei Zhang](https://zhangshaolei1998.github.io/), [Tian Yu](https://tianyu0313.github.io/), [Yang Feng](https://people.ucas.edu.cn/~yangfeng?language=en)*
 
-Source code for paper "TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space".
+Source code for paper "[TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space](https://arxiv.org/pdf/2402.17811.pdf)".
 
 **TruthX** is an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space, thereby mitigating the hallucinations of LLMs. TruthX can control LLMs to generate *truthful* or *hallucinatory* responses by editing only a vector in truthful space.
-On the [TruthfulQA benchmark](https://paperswithcode.com/sota/question-answering-on-truthfulqa), TruthX yields an average **enhancement of 20% in truthfulness** across 13 advanced LLMs.
+On the [TruthfulQA benchmark](https://paperswithcode.com/sota/question-answering-on-truthfulqa), TruthX yields an average **enhancement of 20% in truthfulness** across 13 advanced LLMs. If TruthX interests you, welcome to 🌟 this repo!
 
 <div  align="center">   
   <img src="./assets/truthfulqa_result.png" alt="img" width="100%" />
@@ -25,7 +25,7 @@ We provide 2 types of models to use TruthX:
 - **TruthX models** [[download here]](https://huggingface.co/ICTNLP/TruthX)
   - You should download TruthX models and use them together with the corresponding original LLMs.
   - The results in the paper can be reproduced using these models.
-  - Support: [Llama-1-7B](https://huggingface.co/huggyllama/llama-7b), [Alpaca-7B](https://huggingface.co/chavinlo/alpaca-native), [Llama-2-7B](https://huggingface.co/meta-llama/Llama-2-7b), [Llama-2-7B-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf),[Llama-2-13B-Chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf), [Vicuna-7B-v1.5](https://huggingface.co/lmsys/vicuna-7b-v1.5), [Mistral-7B-v0.1](https://huggingface.co/mistralai/Mistral-7B-v0.1), [Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1), [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2), [Baichuan2-7B-Base](https://huggingface.co/baichuan-inc/Baichuan2-7B-Base), [Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat), [Chatglm3-6B-Base](https://huggingface.co/THUDM/chatglm3-6b-base), [Chatglm3-6B](https://huggingface.co/THUDM/chatglm3-6b)
+  - Support: [Llama-1-7B](https://huggingface.co/huggyllama/llama-7b), [Alpaca-7B](https://huggingface.co/chavinlo/alpaca-native), [Llama-2-7B](https://huggingface.co/meta-llama/Llama-2-7b), [Llama-2-7B-Chat](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf), [Llama-2-13B-Chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf), [Vicuna-7B-v1.5](https://huggingface.co/lmsys/vicuna-7b-v1.5), [Mistral-7B-v0.1](https://huggingface.co/mistralai/Mistral-7B-v0.1), [Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1), [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2), [Baichuan2-7B-Base](https://huggingface.co/baichuan-inc/Baichuan2-7B-Base), [Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat), [Chatglm3-6B-Base](https://huggingface.co/THUDM/chatglm3-6b-base), [Chatglm3-6B](https://huggingface.co/THUDM/chatglm3-6b)
 
 
 ## Overview
@@ -249,3 +249,20 @@ Generation results can be find at `$EXP_ROOT/truthfulqa_generation_truthx/Llama-
 
 ## Licence
 Model weights and the inference code are released under The GNU General Public License v3.0 (GPLv3)
+
+## Citation
+
+If this repository is useful for you, please cite as:
+
+```
+@misc{zhang2024truthx,
+      title={TruthX: Alleviating Hallucinations by Editing Large Language Models in Truthful Space}, 
+      author={Shaolei Zhang and Tian Yu and Yang Feng},
+      year={2024},
+      eprint={2402.17811},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2402.17811}
+}
+```
+
