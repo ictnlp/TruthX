@@ -6,7 +6,8 @@ Source code for paper "[TruthX: Alleviating Hallucinations by Editing Large Lang
 
 **TruthX** is an inference-time method to elicit the truthfulness of LLMs by editing their internal representations in truthful space, thereby mitigating the hallucinations of LLMs. TruthX can control LLMs to generate *truthful* or *hallucinatory* responses by editing only a vector in truthful space.
 
-On the [TruthfulQA benchmark](https://paperswithcode.com/sota/question-answering-on-truthfulqa), TruthX yields an average **enhancement of 20% in truthfulness** across 13 advanced LLMs. If TruthX interests you, welcome to 🌟 this repo!
+> [!Note]
+> On the [TruthfulQA benchmark](https://paperswithcode.com/sota/question-answering-on-truthfulqa), TruthX yields an average **enhancement of 20% in truthfulness** across 13 advanced LLMs. If TruthX interests you, welcome to 🌟 this repo!
 
 <div  align="center">   
   <img src="./assets/truthfulqa_result.png" alt="img" width="100%" />
@@ -85,6 +86,7 @@ print(outputs_text)
   Side-by-side comparison (left: Llama-2-7B-Chat, right: Llama-2-7B-Chat-TruthX)
 </p>
 
+> [!Tip]
 > You can adjust the **editing layers** and **editing strength**. *Positive editing strength will enhance the truthfulness of LLMs*, while *negative editing strength will yield fluent yet highly hallucinatory responses*.
 
 <details>
