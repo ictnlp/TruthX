@@ -23,7 +23,7 @@ We provide 2 types of models to use TruthX:
 
 - **Llama-2-7B-Chat model with baked-in TruthX** [[download here]](https://huggingface.co/ICTNLP/Llama-2-7b-chat-TruthX)
   - You can directly download this baked-in model and use it like standard Llama, no additional operations are required.
-  - Note that TruthX in this model is trained on all TruthfulQA data, different from the two-fold setting in the paper. If you want the baked-in versions of other LLMs, welcome to submit an issue.
+  - If you want the baked-in versions of other LLMs, welcome to submit an issue.
 - **TruthX models** [[download here]](https://huggingface.co/ICTNLP/TruthX)
   - You should download TruthX models and use them together with the corresponding original LLMs.
   - The results in the paper can be reproduced using these models.
@@ -140,7 +140,7 @@ print(outputs_text)
 
 </details>
 
-Run the following scripts (based on [FastChat](https://github.com/lm-sys/FastChat)), and you can interact with TruthX in your browser.
+Run the following scripts step by step (based on [FastChat](https://github.com/lm-sys/FastChat)), and you can interact with TruthX in your browser.
 
 ```bash
 python3 -m fastchat.serve.controller &
