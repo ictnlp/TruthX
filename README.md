@@ -21,8 +21,8 @@ Source code for paper "[TruthX: Alleviating Hallucinations by Editing Large Lang
 
 We provide 2 types of models to use TruthX:
 
-- **Llama-2-7B-Chat model with baked-in TruthX** [[download here]](https://huggingface.co/ICTNLP/Llama-2-7b-chat-TruthX)
-  - You can directly download this baked-in model and use it like standard Llama, no additional operations are required.
+- **Llama-2-7B-Chat model with baked-in TruthX** [[huggingface download]](https://huggingface.co/ICTNLP/Llama-2-7b-chat-TruthX) [[wisemodel download]](https://wisemodel.cn/models/ICT_NLP/Llama-2-7b-chat-TruthX)
+  - You can directly download this baked-in model (a truthfulness-enhanced Llama-2-7B-Chat with TruthX) and use it like standard Llama model, no additional operations are required.
   - If you want the baked-in versions of other LLMs, welcome to submit an issue.
 - **TruthX models** [[download here]](https://huggingface.co/ICTNLP/TruthX)
   - You should download TruthX models and use them together with the corresponding original LLMs.
