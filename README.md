@@ -3,6 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2402.17811-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2402.17811)
 [![hf_model](https://img.shields.io/badge/%F0%9F%A4%97%20model-Llama%202%207b%20chat+TruthX-blue.svg)](https://huggingface.co/ICTNLP/Llama-2-7b-chat-TruthX)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/truthx-alleviating-hallucinations-by-editing/question-answering-on-truthfulqa)](https://paperswithcode.com/sota/question-answering-on-truthfulqa)
+[![star](https://img.shields.io/github/stars/ictnlp/TruthX?color=orange)](https://github.com/ictnlp/TruthX/stargazers)
 
 > [Shaolei Zhang](https://zhangshaolei1998.github.io/), [Tian Yu](https://tianyu0313.github.io/), [Yang Feng](https://people.ucas.edu.cn/~yangfeng?language=en)*
 
